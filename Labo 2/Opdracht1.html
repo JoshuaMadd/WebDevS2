@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht 1</title>
+</head>
+<body>
+<script>
+    const setup = () => {
+        console.log(window.alert("Dit is een mededeling"));
+        //returns: undefined
+        console.log(window.confirm("Weet u het zeker?"));
+        //returns: boolean
+        console.log(window.prompt("Wat is uw naam", "onbekend"));
+        //returns: ingegeven String
+        //Als gebruiker op cancel klikt: empty String;
+    }
+    window.addEventListener("load", setup);
+</script>
+</body>
+</html>
