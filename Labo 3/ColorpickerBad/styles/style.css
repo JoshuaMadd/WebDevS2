@@ -1,0 +1,28 @@
+.colorpicker{
+    display: inline-block;
+    border: 5px solid lightgrey;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+.slider {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.components{
+display: inline-block;
+}
+#display{
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 0.75em;
+    margin-left: 2em;
+    width: 5em;
+    height: 3.75em;
+
+
+
+}
+
+
