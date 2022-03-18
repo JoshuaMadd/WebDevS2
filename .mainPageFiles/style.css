@@ -1,0 +1,124 @@
+
+/*------- CSS reset -------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/*------- Custom properties -------*/
+
+:root{
+    --dark-blue: #39006C;
+    --normal-blue: #3A0CA3;
+    --light-blue: #9ADCFF;
+    --pink: #F72585;
+}
+
+/*------- Disable scrolling -------*/
+
+html, body {
+    overflow: hidden;
+    scroll-behavior: smooth
+}
+
+body{
+    font-family: Coda, serif;
+    font-size: 20px;
+}
+
+/*------- Nav bar -------*/
+
+nav{
+    position: fixed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--normal-blue);
+    float: left;
+    height: 100vh;
+    width: 6em;
+    gap: 1em;
+}
+
+nav a{
+    font-size: 2rem;
+    font-weight: 500;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.25em;
+    background-color: var(--dark-blue);
+    color: var(--pink);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s;
+}
+
+nav a:hover,
+nav a:focus{
+    transform: scale(1.15);
+}
+
+.changeState{
+    color: var(--dark-blue);
+    background-color: var(--pink);
+}
+
+/*------- Main Page -------*/
+
+.pagecontainer{
+    margin-left: 6em
+}
+
+.page{
+    background-color: var(--dark-blue);
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    font-size: 1.3em;
+
+}
+
+.page ul{
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--light-blue);
+    list-style-type: none;
+
+}
+
+.page a:before{
+    content:"\2022";
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: min(2em,4vw);
+}
+
+.page a{
+    color: inherit;
+    transition: 0.3s;
+}
+
+.page li:hover,
+.page a:focus{
+    color: var(--pink);
+    font-size:1.2em;
+}
+
+.info{
+    position: absolute;
+    top: 0.75rem;
+    color: var(--pink);
+    text-align: center;
+}
