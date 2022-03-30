@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Colorpicker</title>
+</head>
+<body>
+<div class="colorpicker">
+    <div class="components">
+
+        <div class="slider">
+            <span>0</span>
+            <input id="red" class="input" type="range" min="0" max="255" />
+            <span>255</span>
+            <label for="red">Red: <span class=output></span></label>
+        </div>
+
+        <div class="slider">
+            <span>0</span>
+            <input id="green" class="input" type="range" min="0" max="255" />
+            <span>255</span>
+            <label for="green">Green: <span class=output>   </span></label>
+        </div>
+
+        <div class="slider">
+            <span>0</span>
+            <input id="blue" class="input" type="range" min="0" max="255" />
+            <span>255</span>
+            <label for="blue">Blue: <span class="output"></span></label>
+        </div>
+
+    </div>
+    <div class="display"></div>
+    <button id="save">Save</button>
+</div>
+<div id="savedColors">
+
+</div>
+
+
+
+<script type="text/javascript" charset="utf-8"
+        src="scripts/code.js"></script>
+</body>
+</html>
