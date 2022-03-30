@@ -14,10 +14,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /*------- Custom properties -------*/
 
 :root{
-    --dark-blue: #39006C;
-    --normal-blue: #3A0CA3;
-    --light-blue: #9ADCFF;
-    --pink: #F72585;
+    --color-primary: #39006C;
+    --color-secondary: #3A0CA3;
+    --color-font: #9ADCFF;
+    --color-accent: #F72585;
+
+
+}
+
+@media (prefers-color-scheme: light){
+    :root{
+        --color-primary: #9ADCFF;
+        --color-secondary: #39006C;
+        --color-font: #3A0CA3;
+        --color-accent: #F72585;
+    }
 }
 
 /*------- Disable scrolling -------*/
@@ -40,7 +51,7 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--normal-blue);
+    background-color: var(--color-secondary);
     float: left;
     height: 100vh;
     width: 6em;
@@ -53,8 +64,8 @@ nav a{
     width: 5rem;
     height: 5rem;
     border-radius: 0.25em;
-    background-color: var(--dark-blue);
-    color: var(--pink);
+    background-color: var(--color-primary);
+    color: var(--color-accent);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -68,8 +79,8 @@ nav a:focus{
 }
 
 .changeState{
-    color: var(--dark-blue);
-    background-color: var(--pink);
+    color: var(--color-primary);
+    background-color: var(--color-accent);
 }
 
 /*------- Main Page -------*/
@@ -79,7 +90,7 @@ nav a:focus{
 }
 
 .page{
-    background-color: var(--dark-blue);
+    background-color: var(--color-primary);
     height: 100vh;
     display:flex;
     align-items: center;
@@ -92,7 +103,7 @@ nav a:focus{
     display: flex;
     flex-direction: column;
     gap: 1em;
-    color: var(--light-blue);
+    color: var(--color-font);
     list-style-type: none;
 
 }
@@ -112,13 +123,13 @@ nav a:focus{
 
 .page li:hover,
 .page a:focus{
-    color: var(--pink);
+    color: var(--color-accent);
     font-size:1.2em;
 }
 
 .info{
     position: absolute;
     top: 0.75rem;
-    color: var(--pink);
+    color: var(--color-accent);
     text-align: center;
 }
