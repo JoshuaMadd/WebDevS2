@@ -8,7 +8,8 @@ const valideer = () => {
 	valideerFamilienaam();
 	valideerGeboortedatum();
 	valideerEmail();
-	valideerAantalKinderen()
+	valideerAantalKinderen();
+	checkAll();
 };
 
 const valideerVoornaam = () => {
@@ -105,6 +106,13 @@ const reportError = (element, errElement, message) => {
 const clearError = (element, errElement) => {
 	element.className="";
 	errElement.innerHTML = "";
+}
+
+const checkAll = () => {
+	let errors = document.getElementsByClassName('invalid');
+	if(errors.length === 0) {
+		alert("proficiat!");
+	}
 }
 
 window.addEventListener("load", setup);
